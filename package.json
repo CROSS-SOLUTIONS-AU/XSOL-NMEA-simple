@@ -29,6 +29,7 @@
     "build": "npm run lint && tsc",
     "lint": "tslint *.ts codecs/*.ts examples/*.ts tests/*.ts",
     "prepublish": "npm run test",
+    "postinstall": "tsc",
     "test": "npm run build && mocha -R tap dist/tests"
   },
   "engines": {
