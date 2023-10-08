@@ -1,0 +1,16 @@
+export declare const sentenceId: "GST";
+export declare const sentenceName = "GPS pseudorange noise statistics";
+export interface GSTPacket {
+    sentenceId: "GST";
+    sentenceName?: string;
+    talkerId?: string;
+    time: Date;
+    totalRms: number;
+    semiMajorError: number;
+    semiMinorError: number;
+    orientationOfSemiMajorError: number;
+    latitudeError: number;
+    longitudeError: number;
+    altitudeError: number;
+}
+export declare function decodeSentence(fields: string[]): GSTPacket;
